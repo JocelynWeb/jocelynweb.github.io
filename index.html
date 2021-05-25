@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">}
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <script type="module" src="cmp/mi-footer.js"></script>
+    </head>
+  <body>
+    <form id="formSaludo">
+      <h1>Bienvenido</h1>
+      <p>
+        <label>
+          Boleta
+          <input type="number" name="boleta">
+        </label>
+      </p>
+      <p>
+        <label>
+          Nombre
+          <input type="text" name="nombre">
+        </label>
+      </p>
+      <p>
+        <label>
+          Grupo
+          <input type="text" name="grupo">
+        </label>
+      </p>
+      <p>
+        <label>
+          Materia
+          <input type="text" name="materia">
+        </label>
+      </p>
+      <p>
+        <label>
+          Fecha
+          <input type="date" name="fecha">
+        </label>
+      </p>
+      <p><button>Enviar</button></p>
+      <p><output name="salida"></output></p>
+    </form>
+    <mi-footer></mi-footer>
+    <script type="module">
+      import {CtrlSaludo} from "/js/CtrlSaludo.js";
+      const ctrlSaludo= new CtrlSaludo();
+      formSaludo.addEventListener("submit", evt => {
+        try {
+          evt.preventDefault();
+          const datos=new FormData(formSaludo);
+          const bol=datos.get("boleta"):
+          const nom=datos.get("nombre"):
+          const gru=datos.get("grupo"):
+          const mat=datos.get("materia"):
+          const fec=datos.get("fecha"):
+          var dato= "Boleta: "+bol+"/n Nombre: "+nom+"/n Grupo: "+gru+"/n Materia: "+mat+"/n Fecha: "+fec;
+          const env= ctrlSaludo.calculaSaludo(dato);
+          formSaludo.salida.value=env;
+        } catch (error) {
+          console.log(error);
+          formSaludo.salida.value=error.message;
+        }
+      });
+    </script>
+  </body>
+</html>  
+    
