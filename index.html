@@ -57,8 +57,8 @@
           const mat=datos.get("materia"):
           const fec=datos.get("fecha"):
           var dato= "Boleta: "+bol+" Nombre: "+nom+" Grupo: "+gru+" Materia: "+mat+" Fecha: "+fec;
-          const env= ctrlSaludo.calculaSaludo(dato);
-          formSaludo.salida.value=env;
+          const saludo= ctrlSaludo.calculaSaludo(dato);
+          formSaludo.salida.value= saludo;
         } catch (error) {
           console.log(error);
           formSaludo.salida.value=error.message;
