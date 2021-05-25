@@ -1,55 +1,49 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primer Proyecto</title>
     <link href="css/style.css" rel="stylesheet">
-    <script type="module" src="cmp/mi-footer.js"></script>
     </head>
   <body>
      <form id="forma" action="javascript:captura()">
         <h1>Bienvenido</h1>
           <label accesskey="B">
-            Boleta
-            <input name="boleta" type="text" autofocus required
+            Boleta <input name="boleta" type="text" autofocus required
                    minlength="1" maxlength="11" placeholder="1 a 10 caracteres">
           </label>
           <output id="salidaBoleta"></output>
         </p>
         <p>
             <label accesskey="N">
-              Nombre
-              <input name="nombre" type="text" required minlength="1" maxlength="50"
+              Nombre <input name="nombre" type="text" required minlength="1" maxlength="50"
                     placeholder="1 a 50 caracteres">
             </label>
             <output id="salidaNombre"></output>
           </p>
           <p>
             <label accesskey="G">
-              Grupo
-              <input name="grupo" type="text" required minlength="1" maxlength="6"
+              Grupo <input name="grupo" type="text" required minlength="1" maxlength="6"
                     placeholder="1 a 5 caracteres">
             </label>
             <output id="salidaGrupo"></output>
           </p>
           <p>
             <label accesskey="M">
-              Materia
-              <input name="materia" type="text" required minlength="6" maxlength="50"
+              Materia <input name="materia" type="text" required minlength="6" maxlength="50"
               placeholder="8 a 50 caracteres">
             </label>
             <output id="salidaMateria"></output>
           </p>
           <p>
             <label accesskey="F">
-              Fecha
-              <input name="fecha" type="date" required>
+              Fecha <input name="fecha" type="date" required>
             </label>
             <output id="salidaFecha"></output>
           </p>
       <input type="submit" value="Procesar" accesskey="P">
-      <br><output id="salidaDatos"></output>
+      <output id="salidaDatos"></output>
     </form>
     <footer>
       <h5>Copyright 2021 Garduño Rebollar Lizeth Jocelyn</h5>
