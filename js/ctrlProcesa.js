@@ -16,6 +16,6 @@ function  captura() {
     grupo =  forma [ "grupo" ].value.trim(),
     materia =  forma [ "materia" ].value.trim();
 
-    salidaDatos . textContent  =  "Boleta:"  +  boleta  +  "|"  +  "Nombre"  +  nombre  +  "|"  +  "Grupo:"  +  grupo 
-    +  "|"  +  "Materia:"  +  materia  +  "|"  +  "Fecha:"  +  fecha . toUTCString ( ) ;
+    salidaDatos . textContent  =  "Boleta: "  +  boleta  +  " | "  +  " Nombre: "  +  nombre  +  " | "  +  " Grupo: "  +  grupo 
+    +  " | "  +  " Materia: "  +  materia  +  " | "  +  " Fecha: "  +  fecha . toUTCString ( ) ;
 }
